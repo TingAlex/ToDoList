@@ -1,0 +1,90 @@
+[
+  {
+    "model": "todos.todo",
+    "pk": 1,
+    "fields": {
+      "priority": "5",
+      "message": "Init the UI",
+      "finish": false,
+      "start_at": "2018-09-15 00:00:00",
+      "end_at": "2018-09-16 00:00:00"
+    }
+  },
+  {
+    "model": "todos.todo",
+    "pk": 2,
+    "fields": {
+        "priority": "4",
+        "message": "Plan the data structure",
+        "finish": false,
+        "start_at": "2018-09-13 00:00:00",
+        "end_at": "2018-09-14 00:00:00"
+      }
+  },
+  {
+    "model": "todos.todo",
+    "pk": 3,
+    "fields": {
+        "priority": "3",
+        "message": "Learn the backend django",
+        "finish": true,
+        "start_at": "2018-09-15 00:00:00",
+        "end_at": "2018-09-18 00:00:00"
+      }
+  },
+  {
+    "model": "todos.todo",
+    "pk": 4,
+    "fields": {
+        "priority": "2",
+        "message": "Learn the django rest framework",
+        "finish": true,
+        "start_at": "2018-09-17 00:00:00",
+        "end_at": "2018-09-19 00:00:00"
+      }
+  },
+  {
+    "model": "todos.todo",
+    "pk": 5,
+    "fields": {
+        "priority": "1",
+        "message": "Finish the back end part",
+        "finish": false,
+        "start_at": "2018-09-12 00:00:00",
+        "end_at": "2018-09-13 00:00:00"
+      }
+  },
+  {
+    "model": "todos.todo",
+    "pk": 6,
+    "fields": {
+        "priority": "1",
+        "message": "Learn the React part again",
+        "finish": false,
+        "start_at": "2018-09-15 00:00:00",
+        "end_at": "2018-09-16 00:00:00"
+      }
+  },
+  {
+    "model": "todos.todo",
+    "pk": 7,
+    "fields": {
+        "priority": "1",
+        "message": "Plan the front end structure",
+        "finish": true,
+        "start_at": "2018-09-14 00:00:00",
+        "end_at": "2018-09-17 00:00:00"
+      }
+  },
+  {
+    "model": "todos.todo",
+    "pk": 8,
+    "fields": {
+        "priority": "1",
+        "message": "Dive into axios part",
+        "finish": false,
+        "start_at": "2018-09-15 00:00:00",
+        "end_at": "2018-09-16 00:00:00"
+      }
+  }
+]
