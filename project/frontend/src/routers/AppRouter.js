@@ -5,6 +5,7 @@ import TodoDashboardPage from "../components/TodoDashboardPage";
 import Header from "../components/Header";
 import EditTodoPage from "../components/EditTodoPage";
 import * as actions from "../actions/todos";
+
 //TODO: NotFound page!
 
 class AppRouter extends React.Component {
@@ -16,13 +17,14 @@ class AppRouter extends React.Component {
       <BrowserRouter>
         <div>
           <Header />
+          <br />
           <Switch>
-            <Route exact path="/" component={TodoDashboardPage} />
-            <Route path="/todo/:id" component={EditTodoPage} />
+              <Route exact path="/" component={TodoDashboardPage} />
+              <Route path="/todo/:id" component={EditTodoPage} />
           </Switch>
         </div>
       </BrowserRouter>
-    )
+    );
   }
 }
 

@@ -2,13 +2,16 @@ import React from "react";
 import AddTodo from "./AddTodo";
 import TodoList from "./TodoList";
 import TodoListFilters from "./TodoListFilters";
+import { Grid } from "react-bootstrap";
 
 const TodoDashboardPage = () => (
-  <div>
+  <Grid>
     <AddTodo />
+    <br/>
     <TodoListFilters />
+    <br/>
     <TodoList />
-  </div>
+  </Grid>
 );
 
 export default TodoDashboardPage;

@@ -1,6 +1,13 @@
 import React from "react";
 import moment from "moment";
 import { DateRangePicker } from "react-dates";
+import {
+  Form,
+  FormGroup,
+  ControlLabel,
+  FormControl,
+  Button
+} from "react-bootstrap";
 
 export default class TodoForm extends React.Component {
   constructor(props) {
@@ -57,29 +64,32 @@ export default class TodoForm extends React.Component {
   };
   render() {
     return (
-      <div>
-        {this.state.error && <p>{this.state.error}</p>}
-        <form onSubmit={this.onSubmit}>
-          <select value={this.state.priority} onChange={this.onPriorityChange}>
+      <Form inline onSubmit={this.onSubmit}>
+        <FormGroup controlId="formControlsSelect">
+          <ControlLabel>Priority:</ControlLabel>
+          <FormControl
+            componentClass="select"
+            value={this.state.priority}
+            onChange={this.onPriorityChange}
+          >
             <option value="1">Low</option>
             <option value="2">Normal</option>
             <option value="3">High</option>
             <option value="4">Extreme</option>
-          </select>
-
-          <input
+          </FormControl>
+        </FormGroup>
+        <FormGroup controlId="formInlineName">
+          <ControlLabel>Todo:</ControlLabel>{" "}
+          <FormControl
             type="text"
-            autoFocus
-            placeholder="Todo..."
+            placeholder="Todo"
             value={this.state.message}
             onChange={this.onMessageChange}
           />
-          {/* <input
-            type="text"
-            placeholder="Priority"
-            value={this.state.priority}
-            onChange={this.onPriorityChange}
-          /> */}
+        </FormGroup>{" "}
+        <FormGroup controlId="formInlineDate">
+          <ControlLabel>Date range:</ControlLabel>{" "}
+          {/* <FormControl type="email" placeholder="jane.doe@example.com" /> */}
           <DateRangePicker
             startDate={this.state.start_at}
             startDateId="start_date_field"
@@ -92,9 +102,47 @@ export default class TodoForm extends React.Component {
             isOutsideRange={() => false}
             showClearDates={true}
           />
-          <button>Add it!</button>
-        </form>
-      </div>
+        </FormGroup>{" "}
+        <Button type="submit">Add it!</Button>
+      </Form>
+      // <div>
+      //   {this.state.error && <p>{this.state.error}</p>}
+      //   <form onSubmit={this.onSubmit}>
+      //     <select value={this.state.priority} onChange={this.onPriorityChange}>
+      //       <option value="1">Low</option>
+      //       <option value="2">Normal</option>
+      //       <option value="3">High</option>
+      //       <option value="4">Extreme</option>
+      //     </select>
+
+      //     <input
+      //       type="text"
+      //       autoFocus
+      //       placeholder="Todo..."
+      //       value={this.state.message}
+      //       onChange={this.onMessageChange}
+      //     />
+      //     {/* <input
+      //       type="text"
+      //       placeholder="Priority"
+      //       value={this.state.priority}
+      //       onChange={this.onPriorityChange}
+      //     /> */}
+      //     <DateRangePicker
+      //       startDate={this.state.start_at}
+      //       startDateId="start_date_field"
+      //       endDate={this.state.end_at}
+      //       endDateId="end_date_field"
+      //       onDatesChange={this.onDatesChange}
+      //       focusedInput={this.state.calendarFocused}
+      //       onFocusChange={this.onFocusChange}
+      //       numberOfMonths={1}
+      //       isOutsideRange={() => false}
+      //       showClearDates={true}
+      //     />
+      //     <button>Add it!</button>
+      //   </form>
+      // </div>
     );
   }
 }

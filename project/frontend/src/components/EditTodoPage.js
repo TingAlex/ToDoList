@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import TodoForm from "./TodoForm";
 import * as actions from "../actions/todos";
+import { Grid,Button } from "react-bootstrap";
 
 export class EditTodoPage extends React.Component {
   onSubmit = todo => {
@@ -14,10 +15,10 @@ export class EditTodoPage extends React.Component {
   };
   render() {
     return (
-      <div>
+      <Grid>
         <TodoForm todo={this.props.todo} onSubmit={this.onSubmit} />
-        <button onClick={this.onRemove}>Remove</button>
-      </div>
+        <Button onClick={this.onRemove}>Remove</Button>
+      </Grid>
     );
   }
 }

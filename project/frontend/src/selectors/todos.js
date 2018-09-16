@@ -3,7 +3,7 @@ const getVisibleTodos = (todos, { sortBy, pickBy }) => {
   switch (pickBy) {
     case "all":
       tempTodo = todos.filter(todo => {
-        return todo;
+        return true;
       });
       break;
     case "unfinish":
@@ -17,6 +17,10 @@ const getVisibleTodos = (todos, { sortBy, pickBy }) => {
       });
       break;
     default:
+    console.log("sort for default");
+      tempTodo = todos.filter(todo => {
+        return true;
+      });
       break;
   }
   return tempTodo.sort((a, b) => {

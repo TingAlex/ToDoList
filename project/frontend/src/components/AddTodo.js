@@ -10,7 +10,7 @@ export class AddTodo extends React.Component {
   render() {
     return (
       <div>
-        <h1>Add a ToDo~</h1>
+        {/* <h1>Add a ToDo~</h1> */}
         <TodoForm onSubmit={this.onSubmit} />
       </div>
     );
