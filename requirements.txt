@@ -1,0 +1,5 @@
+coverage==4.5.1
+Django==1.8.19
+djangorestframework==3.5.4
+Markdown==2.6.11
+pytz==2018.5
