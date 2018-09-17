@@ -4,9 +4,9 @@ This project is based on django, django rest framework, react, redux, react-boot
 The front end project was already compiled down to /project/frontend/static/frontend/main.js. So there is no need to configure front end code.
 
 ## Installation && Run
-* Install Node.js, npm.js, git, python 2.7, virtualenv, virtualenvwrapper-win, django 1.8, django rest framework.
-* Create a virtual python environment named "nine_env"
-* Activate this environment by running this in cmd: C:\Users\Ting\Documents\NineAlgo\todoFinal>workon nine_env
+* Make sure you have git, python 2.7, virtualenv, virtualenvwrapper-win, django 1.8, django rest framework 3.5.4 installed.
+* Create a virtual python environment with python 2.7 named "nine_env"
+* Activate this environment by running this in cmd: `C:\Users\Ting\Documents\NineAlgo\todoFinal>workon nine_env`
 * Install these modules to "nine_env" environment: (below is my configureation)
 coverage            4.5.1,
 Django              1.8.19,
@@ -16,8 +16,8 @@ pip                 18.0,
 pytz                2018.5,
 setuptools          40.2.0,
 wheel               0.31.1
-* cd to the project floder, run this command to erase my testing data in database:>python manage.py flush.
-* run this command to start the server: >python manage.py runserver
+* go to the project floder, run this command to erase my testing data in database:`>python manage.py flush`.
+* run this command to start the server: `>python manage.py runserver`
 * Open http://localhost:8000/ in the browser. Congraduation!
 ![dashboardpage](https://cl.ly/9e52c68a764b/Image%202018-09-17%20at%208.59.59%20AM.png)
 
