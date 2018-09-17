@@ -8,14 +8,13 @@ The front end project was already compiled down to /project/frontend/static/fron
 * Create a virtual python environment named "nine_env"
 * Activate this environment by running this in cmd: C:\Users\Ting\Documents\NineAlgo\todoFinal>workon nine_env
 * Install these modules to "nine_env" environment: (below is my configureation)
-coverage            4.5.1
-Django              1.11.15
-django-filter       2.0.0
-djangorestframework 3.8.2
-Markdown            2.6.11
-pip                 18.0
-pytz                2018.5
-setuptools          40.2.0
+coverage            4.5.1,
+Django              1.8.19,
+djangorestframework 3.5.4,
+Markdown            2.6.11,
+pip                 18.0,
+pytz                2018.5,
+setuptools          40.2.0,
 wheel               0.31.1
 * cd to the project floder, run this command to erase my testing data in database:>python manage.py flush.
 * run this command to start the server: >python manage.py runserver
