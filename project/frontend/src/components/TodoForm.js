@@ -45,11 +45,14 @@ export default class TodoForm extends React.Component {
   onSubmit = e => {
     e.preventDefault();
     if (!this.state.message || !this.state.priority) {
+      console.log("error");
+
       this.setState(() => ({
         error: "Please provide your todo info and priority!"
       }));
     } else {
       this.setState(() => ({ error: "" }));
+      e.target.elements.todo.value = "";
       this.props.onSubmit({
         message: this.state.message,
         priority: parseInt(this.state.priority, 10),
@@ -60,51 +63,57 @@ export default class TodoForm extends React.Component {
           moment(this.state.end_at.valueOf()).format("YYYY-MM-DD") +
           "T00:00:00Z"
       });
+      
     }
   };
   render() {
     return (
-      <Form inline onSubmit={this.onSubmit}>
-        <FormGroup controlId="formControlsSelect">
-          <ControlLabel>Priority:</ControlLabel>
-          <FormControl
-            componentClass="select"
-            value={this.state.priority}
-            onChange={this.onPriorityChange}
-          >
-            <option value="1">Low</option>
-            <option value="2">Normal</option>
-            <option value="3">High</option>
-            <option value="4">Extreme</option>
-          </FormControl>
-        </FormGroup>
-        <FormGroup controlId="formInlineName">
-          <ControlLabel>Todo:</ControlLabel>{" "}
-          <FormControl
-            type="text"
-            placeholder="Todo"
-            value={this.state.message}
-            onChange={this.onMessageChange}
-          />
-        </FormGroup>{" "}
-        <FormGroup controlId="formInlineDate">
-          <ControlLabel>Date range:</ControlLabel>{" "}
-          {/* <FormControl type="email" placeholder="jane.doe@example.com" /> */}
-          <DateRangePicker
-            startDate={this.state.start_at}
-            startDateId="start_date_field"
-            endDate={this.state.end_at}
-            endDateId="end_date_field"
-            onDatesChange={this.onDatesChange}
-            focusedInput={this.state.calendarFocused}
-            onFocusChange={this.onFocusChange}
-            numberOfMonths={1}
-            isOutsideRange={() => false}
-            showClearDates={true}
-          />
-        </FormGroup>{" "}
-        <Button type="submit">Add it!</Button>
-      </Form>
+      <div>
+        {this.state.error && <p>{this.state.error}</p>}
+        <Form inline onSubmit={this.onSubmit}>
+          <FormGroup controlId="formControlsSelect">
+            <ControlLabel>Priority:</ControlLabel>
+            <FormControl
+              componentClass="select"
+              value={this.state.priority}
+              onChange={this.onPriorityChange}
+            >
+              <option value="1">Low</option>
+              <option value="2">Normal</option>
+              <option value="3">High</option>
+              <option value="4">Extreme</option>
+            </FormControl>
+          </FormGroup>
+          <FormGroup controlId="formInlineName">
+            <ControlLabel>Todo:</ControlLabel>{" "}
+            <FormControl
+              type="text"
+              placeholder="Todo"
+              value={this.state.message}
+              onChange={this.onMessageChange}
+              name="todo"
+            />
+          </FormGroup>{" "}
+          <FormGroup controlId="formInlineDate">
+            <ControlLabel>Date range:</ControlLabel>{" "}
+            {/* <FormControl type="email" placeholder="jane.doe@example.com" /> */}
+            <DateRangePicker
+              startDate={this.state.start_at}
+              startDateId="start_date_field"
+              endDate={this.state.end_at}
+              endDateId="end_date_field"
+              onDatesChange={this.onDatesChange}
+              focusedInput={this.state.calendarFocused}
+              onFocusChange={this.onFocusChange}
+              numberOfMonths={1}
+              isOutsideRange={() => false}
+              showClearDates={true}
+            />
+          </FormGroup>{" "}
+          <Button type="submit">Add it!</Button>
+        </Form>
+      </div>
+
       // <div>
       //   {this.state.error && <p>{this.state.error}</p>}
       //   <form onSubmit={this.onSubmit}>
