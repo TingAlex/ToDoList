@@ -3,7 +3,7 @@ It a simple todo-list app. You can add, modify, remove todos, also mark them as 
 The front end project was already compiled down to `/project/frontend/static/frontend/main.js`. So there is no need to configure front end code.
 
 ## Installation && Run
-* Make sure you have git, python 2.7, virtualenv, virtualenvwrapper-win, django 1.8, django rest framework 3.5.4 installed.
+* Make sure you have python 2.7, virtualenv, virtualenvwrapper-win installed.
 * Create a virtual python environment with python 2.7 named "nine_env"
 * Activate this environment by running this in cmd: `C:\Users\Ting\Documents\NineAlgo\todoFinal>workon nine_env`
 * Go to the project floder, and install required modules to "nine_env" environment:`pip install -r requirements.txt`
